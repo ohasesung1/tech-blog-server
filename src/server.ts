@@ -46,10 +46,14 @@ class Server {
     this.setMiddleWare();
     this.setRouter();
 
-    this.server.listen(port, () => {
-      console.log(`tech-diary Server is listening started on port ${port}`);
-    });
-    
+    try {
+      this.server.listen(port, () => {
+        console.log(`tech-diary Server is listening started on port ${port}`);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+
     try {
       HTTPS.createServer(option, this.app).listen(sslPost, () => {
         console.log(`[HTTPS] DGSW-Petition Server is started on port ${sslPost}`);
