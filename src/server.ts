@@ -37,9 +37,9 @@ class Server {
     await connectDB();
 
     const option = {
-      ca: fs.readFileSync('/etc/letsencrypt/live/takeup.co.kr/fullchain.pem'),
-      key: fs.readFileSync(path.resolve(process.cwd(), '/etc/letsencrypt/live/takeup.co.kr/privkey.pem'), 'utf8').toString(),
-      cert: fs.readFileSync(path.resolve(process.cwd(), '/etc/letsencrypt/live/takeup.co.kr/cert.pem'), 'utf8').toString(),
+      ca: fs.readFileSync('/etc/letsencrypt/live/happy-ohaeseong.com/fullchain.pem'),
+      key: fs.readFileSync(path.resolve(process.cwd(), '/etc/letsencrypt/live/happy-ohaeseong.com/privkey.pem'), 'utf8').toString(),
+      cert: fs.readFileSync(path.resolve(process.cwd(), '/etc/letsencrypt/live/happy-ohaeseong.com/cert.pem'), 'utf8').toString(),
     }
 
     // controller router 및 middleware set  함수 실행
