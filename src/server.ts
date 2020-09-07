@@ -56,7 +56,7 @@ class Server {
 
     try {
       HTTPS.createServer(option, this.app).listen(sslPost, () => {
-        console.log(`[HTTPS] DGSW-Petition Server is started on port ${sslPost}`);
+        console.log(`[HTTPS] tech-blog Server is started on port ${sslPost}`);
       });
     } catch (error) {
       console.log('[HTTPS] HTTPS 오류가 발생하였습니다. HTTPS 서버는 실행되지 않습니다.');
