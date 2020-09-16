@@ -138,8 +138,6 @@ export class PostCtrl {
   // 게시글 수정 함수
   public updatePost = async (req: AuthRequest, res: Response) => {
     const { body } = req;
-    console.log(body);
-    
 
     // validate 라이브러리를 사용해 요청 form을 검사합니다.
     try {
