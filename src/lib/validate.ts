@@ -16,7 +16,7 @@ export const writePostValidate = (body: Object) => {
     title: Joi.string().max(50).required(),
     contents: Joi.string().required(),
     category: Joi.string().required(),
-    thumnailAddress: Joi.string().allow(null).allow(''),
+    thumnailAddress: Joi.string().allow(null).allow('').allow(undefined),
   });
 
   return schema.validateAsync(body);
