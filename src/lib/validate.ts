@@ -28,7 +28,7 @@ export const updatePostValidate = (body: Object) => {
     id: Joi.string().required(),
     title: Joi.string().max(50).required(),
     contents: Joi.string().required(),
-    thumnailAddress: Joi.string().allow('', null),
+    thumbnailAddress: Joi.string().allow('', null),
   });
 
   return schema.validateAsync(body);

@@ -154,11 +154,11 @@ export class PostCtrl {
     }
 
     try {
-      const { id, title, contents, thumnailAddress } = body;
+      const { id, title, contents, thumbnailAddress } = body;
       
 
       // 요청받은 게시글 id를 기준으로 데이터를 업데이트하는 함수입니다.
-      await this.postService.updatePostByIdx(id, title, contents, thumnailAddress);
+      await this.postService.updatePostByIdx(id, title, contents, thumbnailAddress);
 
       res.status(200).json({
         status: 200,
