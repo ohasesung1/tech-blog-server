@@ -112,6 +112,8 @@ export class PostCtrl {
       const { title, contents, category } = body;
       let { thumnailAddress } = body;
 
+      console.log(thumnailAddress);
+
       const id: string = await generatedId();
 
       // DB에 저장하는 함수를 실행합니다.
