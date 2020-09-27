@@ -114,11 +114,6 @@ export class PostCtrl {
 
       const id: string = await generatedId();
 
-      if (!thumnailAddress) {
-        thumnailAddress = `https://${replace}/static/img/thumnail_default.png`;
-      }
-      
-
       // DB에 저장하는 함수를 실행합니다.
       await this.postService.createPost(id, title, contents, category, thumnailAddress);
 
